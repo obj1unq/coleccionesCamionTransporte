@@ -7,12 +7,17 @@ Para eso requiere un sistema que le permita planificar qué cosas debe llevar el
 ## El camión
 Se pide que el camión entienda los siguientes mensajes:
 
-* `cargar(cosa)` y `descargar(cosa)`: para manejar qué tiene;
+* `cargar(cosa)`: para agregar una cosa en el camión, validando que no supere el peso máximo de 2.5 toneladas;
+* `descargar(cosa)`: para eliminar una cosa del camión, validando que no se intente descargar algo que no estaba cargado;
 * `pesoTotal()`: es la suma del peso del camión vacío (tara) y su carga. La tara del camión es de 1 tonelada (1000 kilogramos);
-* `excedidoDePeso()`: indica si el peso total es superior al peso máximo. El cual es de 2.5 toneladas;
+* `excedidoDePeso()`: indica si el peso total es superior al peso máximo;
 * `objetosPeligrosos(nivel)`: todos los objetos cargados que superan el nivel de peligrosidad indicados por el valor del parámetro;
 * `objetosMasPeligrososQue(cosa)`: todos los objetos cargados que son más peligrosos que la cosa;
 * `puedeCircularEnRuta(nivelMaximoPeligrosidad)` Puede circular si ninguna cosa que transporta supera el `nivelMaximoPeligrosidad`.
+
+Incluir como mínimo los siguientes tests:
+* Para `cargar` y `descargar`, dos tests de cada uno (un caso exitoso y otro inválido).
+* Para los demás métodos, al menos un test de cada uno.
 
 ## Las cosas
 De las cosas que puede transportar el camión nos interesa el peso y la peligrosidad:
@@ -46,3 +51,4 @@ Hemos descubierto que al cargar cosas al camión estas sufren modificaciones. Se
 - contenedor portuario: hace que reaccione cada una de las cosas que tiene adentro;
 - residuos radioactivos: agrega 15 kilos;
 - embalaje de seguridad: nada.
+
