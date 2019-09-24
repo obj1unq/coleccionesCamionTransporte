@@ -35,12 +35,13 @@ Se pide agregar estos mensajes al camión:
 * `totalBultos()`: la suma de la cantidad de bultos que está transportando. KnightRider, arena a granel y residuos radioactivos son 1 bulto. Bumblebee y embalaje de seguridad son dos. Paquete de ladrillos es 1 hasta 100 ladrillos, 2 de 101 a 300, 3 301 o más. Batería antiaérea: 1 si no tiene misiles, 2 si tiene. Contenedor portuario: 1 + los bultos que tiene adentro.
 * `pesos()`: devuelve una lista con _los pesos_ de cada cosa que tiene el camión.
 
-Agregar la posibilidad de que al cargar una cosa en el camión, esta pueda sufrir cambios. Estos cambios tienen que ocurrir automáticamente cuando, por ejemplo, se ejecuta `camion.cargar(arenaGranel)`. Cómo debería reaccionar cada cosa:
+## Modificaciones al cargar cosas
+Hemos descubierto que al cargar cosas al camión estas sufren modificaciones. Se pide modelar estas modificaciones, para que ocurran automáticamente, por ejemplo, cuando se ejecuta `camion.cargar(arenaGranel)`. Los cambios que tenemos registrados son estos:
 
 - KnightRider: no hace nada;
 - Bumblebee: pasa a robot;
-- paquete de ladrillos: agrega 12 ladrillos;
-- arena a granel: agrega 20 kilos;
+- paquete de ladrillos: pierde 12 ladrillos;
+- arena a granel: pierde 15 kilos;
 - batería antiaérea: carga misiles;
 - contenedor portuario: hace que reaccione cada una de las cosas que tiene adentro;
 - residuos radioactivos: agrega 15 kilos;
