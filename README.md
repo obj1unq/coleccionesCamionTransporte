@@ -24,7 +24,7 @@ De las cosas que puede transportar el camión nos interesa el peso y la peligros
 
 * Knight Rider: pesa 500 kilos y su nivel de peligrosidad es 10.
 * Bumblebee: pesa 800 kilos y su nivel de peligrosidad es 15 si está transformado en auto o 30 si está como robot.
-* Paquete de ladrillos: cada ladrillo pesa 2 kilos, la cantidad de ladrillos que tiene puede variar. La peligrosidad es 2.
+* Paquete de ladrillos: cada ladrillo pesa 2 kilos, la cantidad de ladrillos que tiene puede variar. Para que el paquete no se desarme, lleva refuerzos, que pesan 10kg cada uno. Si el paquete tiene hasta 1000 ladrillos, se utiliza un refuerzo cada 100 ladrillos. Si tiene más ladrillos se debe utilizar un refuerzo cada 50 ladrillos. Los refuerzos se usan enteros, no se puede usar medio refuerzo; por ejemplo para 950 ladrillos se usan 10 refuerzos y para 1020 ladrillos se necesitan 21 refuerzos. La peligrosidad es igual a 50 menos la cantidad de refuerzos utilizados (pero no puede ser negativa, siendo 0 el mínimo posible). Testear el peso y la peligrosidad para un paquete de 950 ladrillos y otro de 1020 ladrillos.
 * Arena a granel: el peso es variable, la peligrosidad es 1.
 * Batería antiaérea : el peso es 300 kilos si está con los misiles o 200 en otro caso. En cuanto a la peligrosidad es 100 si está con los misiles y 0 en otro caso.
 * Contenedor portuario: un contenedor puede tener otras cosas adentro. El peso es 100 + la suma de todas las cosas que estén adentro. Es tan peligroso como el objeto más peligroso que contiene. Si está vacío, su peligrosidad es 0.
